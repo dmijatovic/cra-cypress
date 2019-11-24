@@ -1,0 +1,16 @@
+.header-component {
+  display: flex;
+}
+
+h1 {
+  color: red;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav-link {
+  padding: 1rem;
+  margin: 1rem;
+}
