@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("visitHomePage", () => {
+  const baseUrl = Cypress.config("baseUrl");
+  cy.server();
+  cy.fixture("home/data").as("homeData");
+  cy.route("/api/home", "@homeData").as("apiHomePage");
+  cy.visit(baseUrl);
+});
