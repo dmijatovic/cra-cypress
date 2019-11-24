@@ -1,0 +1,8 @@
+.paragraph-title {
+  padding: 1rem 0rem;
+}
+
+.paragraph-title h2 {
+  font-size: 1.25rem;
+  color: var(--color-primary, #122741);
+}

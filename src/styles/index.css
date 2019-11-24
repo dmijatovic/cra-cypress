@@ -4,6 +4,10 @@ html {
   font-size: 100%;
 }
 
+body {
+  color: var(--color-black, #2a2c2b);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +17,18 @@ html {
 :root {
   --header-height: 4rem;
   --horizontal-padding: 1rem;
+}
+
+:root {
+  --color-accent: #a3b1a8;
+  --color-warning: #ec4031;
+  --color-primary: #122741;
+  --color-action: #c58d70;
+  --color-grey: #666;
+  --color-lightgrey: rgb(211, 206, 206);
+  --color-light: #f4f4f4;
+  --color-white: #fff;
+  --color-black: #2a2c2b;
 }
 
 #root {

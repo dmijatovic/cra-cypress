@@ -1,4 +1,4 @@
-# CRA cypress
+# CRA and Cypress
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Then we added Cypress to try developing using Cypress as main browser during development.
@@ -16,7 +16,20 @@ npx cypress open
 
 ```
 
+### Cypress configuration
+
+At the root of the project there is `cypress.json` file. You use this file to overwrite default configuration.
+If you want to have dynamic configuration you can use node module in plugins folder.
+Cypress creates by default following folder structure in the cypress folder (which is in the root of the project)
+
+- fixtures: for stubbing data request
+- integration: where the test files are
+- plugins: for specific plugins?!?. More information in [documentation](https://on.cypress.io/plugins-guide)
+- support: for creating custom commands or overwrite defaultones
+
 ### Cypres eslint
+
+If your project is using eslint you need to install the plugin and include it in the esling config file.
 
 ```bash
 # install cypress plugin
@@ -30,6 +43,10 @@ yarn add -D eslint-plugin-cypress
   "extends": ["react-app", "plugin:cypress/recommended"]
 }
 ```
+
+### Cypress fixtures
+
+Cypress can be used to stub XHR request. Note that Fetch API does not uses XHR and therefore cannot be intercepted using `cy.route()`. To use cy.route() you need to use axios (for example or Ajax). To intercept fetch api calls you will need to stub window.fetch on your own. Example is [here](https://github.com/cypress-io/cypress-example-recipes/blob/master/examples/stubbing-spying__window-fetch/cypress/integration/stub-fetch-spec.js)
 
 ## Available Scripts
 

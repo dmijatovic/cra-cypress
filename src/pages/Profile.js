@@ -1,11 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 function Profile(props) {
   return (
-    <div>
-      <h1>Profile</h1>
-    </div>
+    <>
+      <h1>Profile {props["id"]}</h1>
+      <pre>{JSON.stringify(props, undefined, 2)}</pre>
+    </>
   );
 }
+
+Profile.propTypes = {
+  id: PropTypes.string
+};
 
 export default Profile;
