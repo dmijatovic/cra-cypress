@@ -11,8 +11,7 @@ function Layout(props) {
   return (
     <>
       <Header />
-      <section className="main" data-test-id="main-page-section">
-        This is my body
+      <section className="main-page-section" data-test-id="main-page-section">
         <Router />
       </section>
       <Footer />

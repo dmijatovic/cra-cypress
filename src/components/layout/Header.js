@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "@reach/router";
 import { routes } from "../../router";
 
-import "./Header.css";
-
 function Header(props) {
   const mapLinks = routes => {
     let Links = [];
@@ -25,8 +23,10 @@ function Header(props) {
   };
   console.log("routes...", routes);
   return (
-    <header data-test-id="header-component">
-      <h1>Header</h1>
+    <header data-test-id="header-component" className="header-component">
+      <div className="header-title">
+        <h1>Header</h1>
+      </div>
       <nav className="header-nav" data-test-id="header-nav">
         {mapLinks(routes)}
       </nav>

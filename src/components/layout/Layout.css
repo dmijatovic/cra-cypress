@@ -1,16 +1,47 @@
 .header-component {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height, 3rem);
+  padding: 1rem;
+  color: #fff;
+  background-color: orangered;
 }
 
-h1 {
-  color: red;
+/* ----------------
+  HEADER
+-------------------*/
+
+.header-title {
+  flex: 1;
+}
+
+.header-title h1 {
+  flex: 1;
+  color: #fff;
 }
 
 .header-nav {
   display: flex;
+  align-items: baseline;
 }
 
 .header-nav-link {
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 1rem;
+}
+
+/*--------------------
+ MAIN BODY
+ --------------------*/
+
+.main-page-section {
+  flex: 1;
+  padding: 1rem;
+}
+
+.footer {
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
 }

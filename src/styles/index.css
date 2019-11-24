@@ -12,4 +12,12 @@ html {
 
 :root {
   --header-height: 4rem;
+  --horizontal-padding: 1rem;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
 }
