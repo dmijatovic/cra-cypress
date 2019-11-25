@@ -3,9 +3,7 @@
 describe("Notes api calls", () => {
   beforeEach(() => {
     // important stub call BEFORE visiting
-    cy.server();
-    cy.fixture("notes/data").as("noteItems");
-    cy.route("/api/notes", "@noteItems").as("apiNotes");
+    cy.stubNotesApi();
   });
 
   it("should load 4 items", () => {

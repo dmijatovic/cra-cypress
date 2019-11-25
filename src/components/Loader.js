@@ -13,7 +13,7 @@ const Loader = props => {
 };
 
 Loader.propTypes = {
-  message: "Loading"
+  message: PropTypes.string
 };
 
 export default Loader;

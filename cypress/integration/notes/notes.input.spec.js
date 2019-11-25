@@ -2,6 +2,8 @@
 
 describe("Notes page", () => {
   beforeEach(() => {
+    cy.server();
+    cy.route("/api/notes", []);
     cy.visit("/notes");
   });
   it("Can navigate to Notes page", () => {
