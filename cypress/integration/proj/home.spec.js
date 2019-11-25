@@ -1,32 +1,25 @@
 /// <reference types="Cypress" />
 
-// import { home } from "../../fixtures/home/data";
-
-describe("Home page", () => {
+describe("Home page - basic load", () => {
   beforeEach(() => {
-    // cy.server();
-    // cy.fixture("home/home.json").as("homeData");
-    // cy.route("/api/home", "@homeData").as("apiHomePage");
-    // cy.visit(baseUrl);
+    //custom function defined in support
+    cy.visitHomePage();
   });
 
-  context("Header component", () => {
-    it("Homepage has Header component", () => {
-      cy.get("[data-test-id='header-component']").should("exist");
-    });
-    it("has nav with at least one link item", () => {
-      cy.get("[data-test-id='header-nav-link']").should("exist");
-    });
+  it("Homepage has Header component", () => {
+    cy.get("[data-test-id='header-component']").should("exist");
+  });
+  it("has nav with at least one link item", () => {
+    cy.get("[data-test-id='header-nav-link']").should("exist");
   });
 
   it("Shows home page content", () => {
-    cy.visitHomePage();
     cy.wait("@apiHomePage");
     cy.get("[data-test-id='home-page-title']").contains("Home page fixture");
   });
 });
 
-describe("Failed", () => {
+describe("Home page - api failure", () => {
   it("Shows error message on failed api", () => {
     cy.server();
     cy.route({

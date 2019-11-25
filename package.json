@@ -10,13 +10,13 @@
     "react-scripts": "3.2.0"
   },
   "scripts": {
-    "dev": "npm run start & npm run e2e:open",
+    "dev": "npm run start & npm run e2e",
     "start": "BROWSER=none PORT=8080 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "e2e": "cypress run",
-    "e2e:open": "cypress open"
+    "e2e:test": "cypress run",
+    "e2e": "cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
